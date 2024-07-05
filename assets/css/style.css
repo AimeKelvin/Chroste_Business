@@ -22,6 +22,7 @@ a {
 a:hover {
   color: #ff724a;
   text-decoration: none;
+  transition: 0.4s ease;
 }
 
 h1,
@@ -181,7 +182,7 @@ h6 {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -217,7 +218,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #fff;
+  color: #000;
 }
 
 .navbar .getstarted,
@@ -225,77 +226,22 @@ h6 {
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #000;
+  border: 2px solid #000;
 }
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #fd3800;
-  border-color: #ff4a17;
+  background: transparent;
+  border-color: #fff;
 }
 
 .navbar>ul>li>.getstarted:before {
   visibility: hidden;
 }
 
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-  border-radius: 4px;
-}
 
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 14px;
-  text-transform: none;
-  color: #15222b;
-  font-weight: 400;
-}
-
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-  color: #ff4a17;
-}
-
-.navbar .dropdown:hover>ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-
-.navbar .dropdown .dropdown:hover>ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
 
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
@@ -387,23 +333,28 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://img.freepik.com/premium-photo/creative-workspace-featuring-colorful-digital-marketing-poster-desk-with-computer-glasses-various-office-supplies_132358-66816.jpg?w=1380") top center;
-  background-size: cover;
+ /*background: url("https://img.freepik.com/premium-photo/creative-workspace-featuring-colorful-digital-marketing-poster-desk-with-computer-glasses-various-office-supplies_132358-66816.jpg?w=1380") top center;*/
+ background: url("../img/videos/Gradient-background-[remix].mp4") top center;
+ background-size: cover;
   position: relative;
   padding: 0;
 
 }
 
-
-#hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+.back-video{
+position: relative;
+height: 100%;
 }
+#background{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
 
 #hero .hero-container {
   position: absolute;
@@ -424,11 +375,11 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fff;
+  color: #000;
 }
 
 #hero h2 {
-  color: #eee;
+  color: #000;
   margin-bottom: 50px;
   font-size: 24px;
 }
@@ -442,14 +393,15 @@ h6 {
   padding: 10px 35px 10px 35px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #fff;
-  background: #ff4a17;
-  border: 2px solid #ff4a17;
+  color: #000;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #000;
 }
 
 #hero .btn-get-started:hover {
   border-color: #fff;
   background: rgba(255, 255, 255, 0.1);
+  color:#fff;
 }
 
 #hero .btn-watch-video {
@@ -462,7 +414,7 @@ h6 {
   align-items: center;
   justify-content: center;
 }
-
+/*
 #hero .btn-watch-video i {
   line-height: 0;
   color: #fff;
@@ -474,7 +426,7 @@ h6 {
 #hero .btn-watch-video:hover i {
   color: #ff4a17;
 }
-
+*/
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
